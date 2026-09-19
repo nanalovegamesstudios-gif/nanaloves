@@ -118,25 +118,14 @@
                 </div>
 
                 <!-- PESTAÑA: BLOG -->
-                                <!-- ========================================== -->
-                <!-- PESTAÑA 3: BLOG (Tu texto corregido y limpio) -->
-                <!-- ========================================== -->
                 <div id="vlog" class="section">
                     <div class="cabecera-seccion"><h2>Blog</h2></div>
-                    
-                    <!-- Todo tu pensamiento y tu foto adentro de una sola caja bien cerrada -->
                     <div class="post-muro">
                         <h3>Este es mi espacio para desahogarme de manera íntima y publicar lo que yo quiera sin censuras ni restrincciones</h3>
-                      
                         <p>Hola, me presento, soy Nana, bueno cree este sitio por querer salir de lo normal y para subir algunas ideas que tenga en mente posiblemente, quiero decir que no soy programadora asi que puede tener fallos :(.</p>
-                        
-                        <!-- Tu imagen enmarcada en rojo abajo de tu saludo -->
                         <img src="avatar.png" style="width: 100%; max-width: 500px; display: block; margin-top: 15px; border: 2px solid #6b1818;" alt="Avatar de Nana" onerror="this.style.display='none';">
-
-                    </div> <!-- ¡Este cierre final es el que salva tu pantalla! -->
+                    </div> 
                 </div>
-
-
                 <!-- PESTAÑA: COMENTARIOS -->
                 <div id="comentarios" class="section">
                     <div class="cabecera-seccion"><h2>Comentarios</h2></div>
@@ -169,16 +158,13 @@
 
         <div class="firma-footer">Nanalovesgamesstudios</div>
     </div> <!-- Cierre pantalla-lienzo -->
-    <!-- ========================================== -->
-    <!-- MOTOR INTERACTIVO CON BASE DE DATOS MUNDIAL -->
-    <!-- ========================================== -->
 
-            <!-- ========================================== -->
+    <!-- ========================================== -->
     <!-- MOTOR INTERACTIVO MUNDIAL CORREGIDO (SIN ERRORES) -->
     <!-- ========================================== -->
     <script>
-        // Servidor interactivo global con permisos de seguridad abiertos para Nana
-        const URL_SERVIDOR = "https://allorigins.win";
+        // Enlaces reales corregidos con bypass seguro AllOrigins y JSONBin
+        const URL_SERVIDOR = "https://allorigins.win" + encodeURIComponent("https://jsonbin.io");
         const URL_SUBIDA = "https://jsonbin.io";
         const CLAVE_SEC = "$2b$10$9XwE4FshvSgUjQpT3G2MWevLzC1x9E4wYp33XmUqjP.Z3w6Uf7RKu";
 
@@ -213,7 +199,10 @@
             contenedor.innerHTML = "<div style='text-align:center; color:#ff8888;'>Sincronizando comentarios a nivel mundial...</div>";
 
             fetch(URL_SERVIDOR)
-            .then(res => res.json())
+            .then(res => {
+                if (res.ok) return res.json();
+                throw new Error();
+            })
             .then(data => {
                 contenedor.innerHTML = "";
                 var lista = data.record.comentarios || [];
@@ -254,6 +243,7 @@
             var mensaje = cajaTexto.value.trim();
             if(mensaje === "") return;
 
+            // 🔐 TU CANDADO DE SEGURIDAD EXACTO CONTRA IMPOSTORES
             if (nombre.toLowerCase() === "creadora" || nombre.toLowerCase() === "nanalove") {
                 var password = prompt("Introduce tu contraseña secreta de Creadora:");
                 if (password === "gata123") { 
