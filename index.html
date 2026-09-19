@@ -68,13 +68,6 @@
         .post-muro p { font-size: 1.05rem; line-height: 1.6; color: #d0c0c0; }
         .link-descarga { display: inline-block; background: transparent; color: #ffffff; border: 1px solid #6b1818; padding: 6px 15px; margin-top: 10px; text-decoration: none; font-weight: bold; font-size: 0.85rem; }
         
-        /* COMENTARIOS LOCALES */
-        .caja-comentarios-local { display: flex; flex-direction: column; gap: 20px; align-items: center; width: 100%; max-width: 550px; margin: 0 auto; }
-        .comentario-input-box { width: 100%; background-color: #150606; border: 1px solid #6b1818; color: #ffffff; padding: 12px; font-size: 1rem; font-family: inherit; resize: none; }
-        .lista-comentarios-render { width: 100%; display: flex; flex-direction: column; gap: 15px; }
-        .item-comentario { background-color: #120404; border: 1px solid #441717; padding: 12px; border-radius: 4px; }
-        .item-comentario span { font-size: 0.8rem; color: #ff8888; display: block; margin-bottom: 5px; }
-        
         .firma-footer { background-color: #000000; padding: 12px; text-align: center; font-size: 0.85rem; letter-spacing: 2px; border-top: 2px solid #3b0e0e; color: #ffffff; }
 
         /* --- REGLA ADAPTABLE CELULARES --- */
@@ -113,7 +106,7 @@
                 <!-- PESTAÑA: PROYECTOS -->
                 <div id="proyectos" class="section">
                     <div class="cabecera-seccion"><h2>Proyectos</h2></div>
-                    <div class="post-muro"><h3>Ilustraciones libres</h3><p> </p></div>
+                    <div class="post-muro"><h3> </h3><p> </p></div>
                     <div class="post-muro"><h3>Proyectos </h3><p>Espacio oficial. Avances y archivos.</p><a href="#" class="link-descarga">Descargar archivo</a></div>
                 </div>
 
@@ -125,49 +118,62 @@
                         <p>Hola, me presento, soy Nana, bueno cree este sitio por querer salir de lo normal y para subir algunas ideas que tenga en mente posiblemente, quiero decir que no soy programadora asi que puede tener fallos :(.</p>
                         <img src="avatar.png" style="width: 100%; max-width: 500px; display: block; margin-top: 15px; border: 2px solid #6b1818;" alt="Avatar de Nana" onerror="this.style.display='none';">
                     </div> 
+                  <!-- CÓPIALO Y PÉGALO EN TU BLOG EN ACODE ABAJO DEL PRIMER PENSAMIENTO: -->
+<div class="post-muro">
+    <h3>Holaaa</h3>
+    <p> La verdad estuve un buen rato tratando de meter los comentarios, pero como dije no soy buena programando asi que mejor usare el lugar para poder subir mis cosas, y como un diario personal, entonces cualquier cosa puedes mandarme un mensaje a alguna de mis redes sociales y respondere. :3</p>
+    
+    <!-- 🎬 AQUÍ VA TU GIF ANIMADO: -->
+    <img src="gif1.gif" style="width: 100%; max-width: 500px; display: block; margin-top: 15px; border: 2px solid #6b1818;" alt="Mi GIF animado">
+</div>
+
                 </div>
-                <!-- PESTAÑA: COMENTARIOS -->
-                <div id="comentarios" class="section">
-                    <div class="cabecera-seccion"><h2>Comentarios</h2></div>
-                                        <div class="caja-comentarios-local" style="width: 100%; max-width: 600px; margin: 0 auto; background-color: #120404; padding: 15px; border: 1px solid #6b1818;">
-                        <!-- TU COMENTARIO INICIAL SOBERANO -->
-                        <div style="border: 2px solid #6b1818; padding: 10px 30px; font-weight: bold; font-size: 1.1rem; background-color: #0d0404; text-transform: uppercase; text-align: center; margin-bottom: 20px;">
-                            Muro de Opiniones Global
-                        </div>
+                <!-- ========================================== -->
+                <!-- PESTAÑA 4: ILUSTRACIONES (Tu nueva Galería) -->
+                <!-- ========================================== -->
+                <div id="ilustraciones" class="section">
+                    <div class="cabecera-seccion">
+                        <h2>Ilustraciones</h2>
+                    </div>
+                    
+                    <div class="post-muro">
+                        <h3> </h3>
+                        <p>Bienvenidos a mi galería soberana. Aquí iré subiendo mis ilustraciones libres, Concepts de personajes y Fanarts. </p>
                         
-                        <!-- 🌐 AQUÍ ENTRA EL MOTOR MUNDIAL DE DISQUS -->
-                        <div id="disqus_thread"></div>
+                        <!-- 🖼️ Espacio listo para tu primer dibujo de la galería. Puedes cambiar "avatar.png" por tu dibujo nuevo después -->
+                        <img src="avatar.png" style="width: 100%; max-width: 500px; display: block; margin-top: 15px; border: 2px solid #6b1818;" alt="Mis Ilustraciones" onerror="this.style.display='none';">
                     </div>
                 </div>
-            </div> <!-- panel-izquierdo -->
 
+            </div> <!-- Cierre panel-izquierdo -->
 
             <!-- PANEL DERECHO: TU MENÚ ÚNICO DERECHO -->
             <div class="panel-derecho-menu">
                 <div id="ind-inicio" class="bloque-indicador" style="background-color: #7a3e3e;"></div>
                 <div id="ind-proyectos" class="bloque-indicador"></div>
                 <div id="ind-vlog" class="bloque-indicador"></div>
-                <div id="ind-comentarios" class="bloque-indicador"></div>
+                <div id="ind-ilustraciones" class="bloque-indicador"></div>
 
                 <div class="titulo-indice">Indice</div>
 
                 <button id="btn-inicio" class="menu-btn active" onclick="showSection('inicio', 'btn-inicio', 'ind-inicio')">Inicio</button>
                 <button id="btn-proyectos" class="menu-btn" onclick="showSection('proyectos', 'btn-proyectos', 'ind-proyectos')">proyectos</button>
                 <button id="btn-vlog" class="menu-btn" onclick="showSection('vlog', 'btn-vlog', 'ind-vlog')">Blog</button>
-                <button id="btn-comentarios" class="menu-btn" onclick="showSection('comentarios', 'btn-comentarios', 'ind-comentarios')">Comentarios</button>
+                <button id="btn-ilustraciones" class="menu-btn" onclick="showSection('ilustraciones', 'btn-ilustraciones', 'ind-ilustraciones')">Ilustraciones</button>
             </div>
         </div> <!-- Cierre zona-central -->
 
         <div class="firma-footer">Nanalovesgamesstudios</div>
     </div> <!-- Cierre pantalla-lienzo -->
 
-            <!-- ========================================== -->
-    <!-- MOTOR INTERACTIVO CON INTEGRACIÓN DE DISQUS -->
+    <!-- ========================================== -->
+    <!-- MOTOR INTERACTIVO TOTALMENTE COMPLETO Y LIMPIO -->
     <!-- ========================================== -->
     <script>
         function showSection(sectionId, buttonId, indicadorId) {
             var sections = document.getElementsByClassName('section');
             for (var i = 0; i < sections.length; i++) { sections[i].style.display = 'none'; }
+            
             var buttons = document.getElementsByClassName('menu-btn');
             for (var j = 0; j < buttons.length; j++) { buttons[j].classList.remove('active'); }
             
@@ -178,24 +184,10 @@
             
             document.getElementById(sectionId).style.display = 'block'; 
             document.getElementById(buttonId).classList.add('active'); 
-            if(document.getElementById(indicatorId)) {
+            if(document.getElementById(indicadorId)) {
                 document.getElementById(indicatorId).style.backgroundColor = '#7a3e3e';
             }
         }
-
-        // CONFIGURACIÓN DE TU CUENTA REAL DE DISQUS
-        var disqus_config = function () {
-            this.page.url = "https://github.io";  
-            this.page.identifier = "nanalove_main_muro"; 
-        };
-
-        (function() { 
-            var d = document, s = d.createElement('script');
-            // Usamos tu shortname oficial de nanalovegamesstudios-gif
-            s.src = 'https://disqus.com';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
     </script>
 </body>
 </html>
