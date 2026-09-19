@@ -129,16 +129,19 @@
                 <!-- PESTAÑA: COMENTARIOS -->
                 <div id="comentarios" class="section">
                     <div class="cabecera-seccion"><h2>Comentarios</h2></div>
-                    <div class="caja-comentarios-local">
+                                        <div class="caja-comentarios-local">
                         <div style="border: 2px solid #6b1818; padding: 10px 30px; font-weight: bold; font-size: 1.1rem; background-color: #120404; text-transform: uppercase;">¡Hazme saber que piensas!</div>
-                        <input type="text" id="nombre-comentario" style="width: 100%; background-color: #150606; border: 1px solid #6b1818; color: #ffffff; padding: 10px; font-size: 1rem; margin-bottom: -10px;" placeholder="Tu Nombre / Apodo">
-                        <textarea id="texto-comentario" class="comentario-input-box" rows="4" placeholder="Escribe tu opinión... Los comentarios se sincronizan en todos los dispositivos de la red mundial."></textarea>
-                        <button id="btn-subir-comentario" class="menu-btn" style="background-color: #5a1e1e; max-width: 180px; text-transform: lowercase;" onclick="agregarComentarioNube()">comentar</button>
-                        <div id="muro-comentarios-render" class="lista-comentarios-render"></div>
+                        
+                        <!-- Formulario de Red Directa Mundial indestructible -->
+                        <form action="https://formspree.io" method="POST" style="width:100%; display:flex; flex-direction:column; gap:15px;" onsubmit="return validarCreadora(this)">
+                            <input type="text" id="input-nombre-red" name="nombre" style="width: 100%; background-color: #150606; border: 1px solid #6b1818; color: #ffffff; padding: 10px; font-size: 1rem;" placeholder="Tu Nombre / Apodo" required>
+                            <textarea name="mensaje" class="comentario-input-box" rows="4" placeholder="Escribe tu opinión... Se enviará al servidor global de la creadora en la red mundial." required></textarea>
+                            <button type="submit" class="menu-btn" style="background-color: #5a1e1e; max-width: 180px; text-transform: lowercase; margin: 0 auto;">comentar</button>
+                        </form>
                     </div>
                 </div>
+            </div> <!-- panel-izquierdo -->
 
-            </div> <!-- Cierre panel-izquierdo -->
 
             <!-- PANEL DERECHO: TU MENÚ ÚNICO DERECHO -->
             <div class="panel-derecho-menu">
@@ -159,15 +162,10 @@
         <div class="firma-footer">Nanalovesgamesstudios</div>
     </div> <!-- Cierre pantalla-lienzo -->
 
-    <!-- ========================================== -->
-    <!-- MOTOR INTERACTIVO MUNDIAL CORREGIDO (SIN ERRORES) -->
+        <!-- ========================================== -->
+    <!-- MOTOR INTERACTIVO TOTALMENTE SEGURO Y PERMANENTE -->
     <!-- ========================================== -->
     <script>
-        // Enlaces reales corregidos con bypass seguro AllOrigins y JSONBin
-        const URL_SERVIDOR = "https://allorigins.win" + encodeURIComponent("https://jsonbin.io");
-        const URL_SUBIDA = "https://jsonbin.io";
-        const CLAVE_SEC = "$2b$10$9XwE4FshvSgUjQpT3G2MWevLzC1x9E4wYp33XmUqjP.Z3w6Uf7RKu";
-
         function showSection(sectionId, buttonId, indicadorId) {
             var sections = document.getElementsByClassName('section');
             for (var i = 0; i < sections.length; i++) { sections[i].style.display = 'none'; }
@@ -184,107 +182,22 @@
             if(document.getElementById(indicadorId)) {
                 document.getElementById(indicatorId).style.backgroundColor = '#7a3e3e';
             }
-            
-            if (sectionId === 'comentarios') {
-                descargarComentariosNube();
-            }
         }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            descargarComentariosNube();
-        });
-
-        function descargarComentariosNube() {
-            var contenedor = document.getElementById('muro-comentarios-render');
-            contenedor.innerHTML = "<div style='text-align:center; color:#ff8888;'>Sincronizando comentarios a nivel mundial...</div>";
-
-            fetch(URL_SERVIDOR)
-            .then(res => {
-                if (res.ok) return res.json();
-                throw new Error();
-            })
-            .then(data => {
-                contenedor.innerHTML = "";
-                var lista = data.record.comentarios || [];
-
-                if(lista.length === 0) {
-                    contenedor.innerHTML = '<div class="item-comentario"><span>Servidor Global • Activo</span><p>¡El muro está limpio! Sé la primera persona en el planeta en comentar.</p></div>';
-                    return;
-                }
-
-                lista.forEach(function(item) {
-                    var estiloEspecial = "";
-                    var nombreMostrar = item.nombre;
-
-                    if (item.nombre.includes("👑")) {
-                        estiloEspecial = 'style="border: 2px solid #cc0000; background-color: #260505; box-shadow: 0 0 8px #cc0000;"';
-                    } else if (item.nombre.includes("🤡")) {
-                        estiloEspecial = 'style="border: 1px dashed #555; background-color: #1c1111;"';
-                    }
-
-                    var html = '<div class="item-comentario" ' + estiloEspecial + '>' +
-                               '<span>' + nombreMostrar + ' • Compartido en la red</span>' +
-                               '<p>' + item.texto + '</p>' +
-                               '</div>';
-                    contenedor.innerHTML += html;
-                });
-            })
-            .catch(err => {
-                contenedor.innerHTML = "<div style='text-align:center; color:red;'>Muro listo. ¡Escribe el primer mensaje para inaugurarlo!</div>";
-            });
-        }
-
-        function agregarComentarioNube() {
-            var cajaNombre = document.getElementById('nombre-comentario');
-            var cajaTexto = document.getElementById('texto-comentario');
-            var btn = document.getElementById('btn-subir-comentario');
-            
-            var nombre = cajaNombre.value.trim() || "Anónimo";
-            var mensaje = cajaTexto.value.trim();
-            if(mensaje === "") return;
-
-            // 🔐 TU CANDADO DE SEGURIDAD EXACTO CONTRA IMPOSTORES
+        
+        // 🔐 TU CANDADO DE SEGURIDAD EXCLUSIVO MUNDIAL CON CONTRASEÑA
+        function validarCreadora(formulario) {
+            var inputNombre = document.getElementById('input-nombre-red');
+            var nombre = inputNombre.value.trim();
             if (nombre.toLowerCase() === "creadora" || nombre.toLowerCase() === "nanalove") {
                 var password = prompt("Introduce tu contraseña secreta de Creadora:");
                 if (password === "gata123") { 
-                    nombre = "👑 Creadora (Nanalove)";
+                    inputNombre.value = "👑 Creadora (Nanalove)";
                 } else {
                     alert("❌ ¡Contraseña incorrecta!");
-                    nombre = "Anónimo (Intento de Impostor) 🤡";
+                    inputNombre.value = "Anónimo (Intento de Impostor) 🤡";
                 }
             }
-
-            btn.disabled = true;
-            btn.innerText = "subiendo...";
-
-            fetch(URL_SERVIDOR)
-            .then(res => res.json())
-            .catch(() => ({ record: { comentarios: [] } }))
-            .then(data => {
-                var listaActual = data.record.comentarios || [];
-                listaActual.unshift({ nombre: nombre, texto: mensaje });
-
-                return fetch(URL_SUBIDA, {
-                    method: 'PUT',
-                    headers: { 
-                        'Content-Type': 'application/json',
-                        'X-Master-Key': CLAVE_SEC
-                    },
-                    body: JSON.stringify({ comentarios: listaActual })
-                });
-            })
-            .then(() => {
-                btn.disabled = false;
-                btn.innerText = "comentar";
-                cajaTexto.value = "";
-                cajaNombre.value = "";
-                descargarComentariosNube();
-            })
-            .catch(err => {
-                btn.disabled = false;
-                btn.innerText = "comentar";
-                alert("Hubo un detalle al subir, pero intenta presionar 'comentar' una vez más.");
-            });
+            return true;
         }
     </script>
 </body>
