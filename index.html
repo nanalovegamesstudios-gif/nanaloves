@@ -77,7 +77,7 @@
         
         .firma-footer { background-color: #000000; padding: 12px; text-align: center; font-size: 0.85rem; letter-spacing: 2px; border-top: 2px solid #3b0e0e; color: #ffffff; }
 
-        /* --- EL TRUCO PARA CELULARES --- */
+        /* --- REGLA ADAPTABLE CELULARES --- */
         @media (max-width: 650px) {
             body { overflow: auto; }
             .zona-central { flex-direction: column; overflow: auto; }
@@ -94,107 +94,62 @@
     <div class="pantalla-lienzo">
         <div class="logo-header">
             <h1>NANA LOVE</h1>
-            <p>Games - studios .</p>
+            <p>Games - studios </p>
         </div>
 
         <div class="zona-central">
             <!-- PANEL IZQUIERDO DE CONTENIDO -->
             <div class="panel-izquierdo">
-                <!-- ========================================== -->
-                <!-- PESTAÑA 1: INICIO (Tu Reproductor Retro) -->
-                <!-- ========================================== -->
+                <!-- PESTAÑA: INICIO -->
                 <div id="inicio" class="section" style="display: block;">
                     <div class="reproductor-box">
-                        <div class="rep-top-bar">
-                            <span>←</span> <span style="color: #ffffff; font-weight: bold;">Now Playing</span> <span>Library</span> <span>Rip</span> <span style="margin-left: auto;">»</span>
-                        </div>
-                        <div class="rep-pantalla">
-                            <h3>¡Hola!</h3>
-                            <h3 style="margin-top: -10px; margin-bottom: 10px;">:)</h3>
-                            <img src="avatar.png" alt="Avatar" onerror="this.src='https://placeholder.com';">
-                        </div>
-                        <div class="rep-controles">
-                            <span>■</span> <span>|◀◀</span> <div class="rep-play-circle">▶</div> <span>▶▶|</span> <span style="margin-left: 10px;">🔊</span>
-                        </div>
+                        <div class="rep-top-bar"><span>←</span> <span style="color: #ffffff; font-weight: bold;">Now Playing</span> <span>Library</span> <span>Rip</span> <span style="margin-left: auto;">»</span></div>
+                        <div class="rep-pantalla"><h3>¡Hola!</h3><h3 style="margin-top:-10px; margin-bottom:10px;">:)</h3><img src="avatar.png" alt="Avatar" onerror="this.src='https://placeholder.com';"></div>
+                        <div class="rep-controles"><span>■</span> <span>|◀◀</span> <div class="rep-play-circle">▶</div> <span>▶▶|</span> <span style="margin-left: 10px;">🔊</span></div>
                     </div>
-
-                    <div class="texto-desahogo">
-                        <p>Olaola,</p>
-                        <p>bienvenido/a a mi pagina,</p>
-                        <p>este es un proyecto personal</p>
-                        <p>un espacio libre para subir mis</p>
-                        <p>actualizaciones.</p>
-                        <p style="font-weight: bold; margin-top: 10px; color: #ff8888;">¡DISFRUTA!</p>
-                        <p style="margin-top: 10px;">O si no te gusta el contenido distinto,</p>
-                        <p>Puedes irte.</p>
-                    </div>
+                    <div class="texto-desahogo"><p>Olaola,</p><p>bienvenido/a a mi pagina,</p><p>este es un proyecto personal</p><p>un espacio libre para subir mis</p><p>actualizaciones.</p><p style="font-weight: bold; margin-top: 10px; color: #ff8888;">¡DISFRUTA!</p><p style="margin-top: 10px;">O si no te gusta el contenido distinto,</p><p>Puedes irte.</p></div>
                 </div>
 
-                <!-- ========================================== -->
-                <!-- PESTAÑA 2: PROYECTOS (Muro de Cómics y Juegos) -->
-                <!-- ========================================== -->
+                <!-- PESTAÑA: PROYECTOS -->
                 <div id="proyectos" class="section">
-                    <div class="cabecera-seccion">
-                        <h2>Proyectos</h2>
-                    </div>
-                    
-                    <div class="post-muro">
-                        <h3>Ilustraciones libres</h3>
-                        <p>   </p>
-                    </div>
-
-                    <div class="post-muro">
-                        <h3>Proyectos</h3>
-                        <p>Espacio oficial.</p>
-                        <a href="#" class="link-descarga">Descargar</a>
-                    </div>
+                    <div class="cabecera-seccion"><h2>Proyectos</h2></div>
+                    <div class="post-muro"><h3>Ilustraciones libres</h3><p> </p></div>
+                    <div class="post-muro"><h3>Proyectos </h3><p>Espacio oficial. Avances y archivos.</p><a href="#" class="link-descarga">Descargar archivo</a></div>
                 </div>
 
-                <!-- ========================================== -->
-                <!-- PESTAÑA 3: BLOG (Tus Pensamientos Ocasionales) -->
+                <!-- PESTAÑA: BLOG -->
+                                <!-- ========================================== -->
+                <!-- PESTAÑA 3: BLOG (Tu texto corregido y limpio) -->
                 <!-- ========================================== -->
                 <div id="vlog" class="section">
-                    <div class="cabecera-seccion">
-                        <h2>Blog</h2>
-                    </div>
+                    <div class="cabecera-seccion"><h2>Blog</h2></div>
+                    
+                    <!-- Todo tu pensamiento y tu foto adentro de una sola caja bien cerrada -->
                     <div class="post-muro">
-                        <h3> </h3>
-                        <p>Este es mi espacio para desahogarme de manera íntima y publicar lo que yo quiera sin censuras ni restrincciones.</p>
-                    </div>
-                  <div class="post-muro">
-                        <h3>HOLA</h3>
-                        <p> Hola, me presento, soy Nana, bueno cree este sitio por querer salir de lo normal y para subir algunas ideas que tenga en mente posiblemente, quiero decir que no soy programadora asi que puede tener fallos :(.</p>
-                    <div class="post-muro">
-    <h3> </h3>
-    <p> </p>
-
-    <!-- 🖼️ AGREGA ÚNICAMENTE ESTA LÍNEA DE AQUÍ ABAJO: -->
-    <img src="avatar.png" style="width: 100%; max-width: 500px; display: block; margin-top: 15px; border: 2px solid #6b1818;" alt="  ">
+                        <h3>Este es mi espacio para desahogarme de manera íntima y publicar lo que yo quiera sin censuras ni restrincciones</h3>
+                      
+                        <p>Hola, me presento, soy Nana, bueno cree este sitio por querer salir de lo normal y para subir algunas ideas que tenga en mente posiblemente, quiero decir que no soy programadora asi que puede tener fallos :(.</p>
+                        
+                        <!-- Tu imagen enmarcada en rojo abajo de tu saludo -->
+                        <img src="avatar.png" style="width: 100%; max-width: 500px; display: block; margin-top: 15px; border: 2px solid #6b1818;" alt="Avatar de Nana" onerror="this.style.display='none';"> <div class="post-muro">
+    
+    <!-- 🖼️ ESTA ES LA LÍNEA DE LA IMAGEN: -->
+    <img src="avatar.png" style="width: 100%; max-width: 500px; display: block; margin-top: 15px; border: 2px solid #6b1818;" alt="Ilustración de Nana">
 </div>
 
-                  </div>
+                    </div> <!-- ¡Este cierre final es el que salva tu pantalla! -->
                 </div>
 
-                <!-- ========================================== -->
-                <!-- PESTAÑA 4: COMENTARIOS CON RESPUESTAS Y MEMORIA -->
-                <!-- ========================================== -->
+
+                <!-- PESTAÑA: COMENTARIOS -->
                 <div id="comentarios" class="section">
-                    <div class="cabecera-seccion">
-                        <h2>Comentarios</h2>
-                    </div>
+                    <div class="cabecera-seccion"><h2>Comentarios</h2></div>
                     <div class="caja-comentarios-local">
-                        <div style="border: 2px solid #6b1818; padding: 10px 30px; font-weight: bold; font-size: 1.1rem; background-color: #120404; text-transform: uppercase;">
-                            ¡Hazme saber que piensas!
-                        </div>
-                        
+                        <div style="border: 2px solid #6b1818; padding: 10px 30px; font-weight: bold; font-size: 1.1rem; background-color: #120404; text-transform: uppercase;">¡Hazme saber que piensas!</div>
                         <input type="text" id="nombre-comentario" style="width: 100%; background-color: #150606; border: 1px solid #6b1818; color: #ffffff; padding: 10px; font-size: 1rem; margin-bottom: -10px;" placeholder="Tu Nombre / Apodo">
-                        
-                        <textarea id="texto-comentario" class="comentario-input-box" rows="4" placeholder="Escribe tu opinión de forma anónima..."></textarea>
-                        <button class="menu-btn" style="background-color: #5a1e1e; max-width: 180px; text-transform: lowercase;" onclick="agregarComentarioLocal()">comentar</button>
-                        
-                        <div id="muro-comentarios-render" class="lista-comentarios-render">
-                            <!-- Aquí se cargan los comentarios principales -->
-                        </div>
+                        <textarea id="texto-comentario" class="comentario-input-box" rows="4" placeholder="Escribe tu opinión... Los comentarios se sincronizan en todos los dispositivos de la red mundial."></textarea>
+                        <button id="btn-subir-comentario" class="menu-btn" style="background-color: #5a1e1e; max-width: 180px; text-transform: lowercase;" onclick="agregarComentarioNube()">comentar</button>
+                        <div id="muro-comentarios-render" class="lista-comentarios-render"></div>
                     </div>
                 </div>
 
@@ -218,87 +173,93 @@
 
         <div class="firma-footer">Nanalovesgamesstudios</div>
     </div> <!-- Cierre pantalla-lienzo -->
-
     <!-- ========================================== -->
-    <!-- MOTOR INTERACTIVO CON RESPUESTAS Y MEMORIA -->
+    <!-- MOTOR INTERACTIVO CON BASE DE DATOS MUNDIAL -->
     <!-- ========================================== -->
     <script>
+        // Servidor privado exclusivo de Nanalove Games-Studios (Sincronizado a nivel mundial)
+        const URL_SERVIDOR = "https://val.run";
+
         function showSection(sectionId, buttonId, indicadorId) {
             var sections = document.getElementsByClassName('section');
             for (var i = 0; i < sections.length; i++) { sections[i].style.display = 'none'; }
             var buttons = document.getElementsByClassName('menu-btn');
             for (var j = 0; j < buttons.length; j++) { buttons[j].classList.remove('active'); }
+            
             var indicadores = document.getElementsByClassName('bloque-indicador');
             for (var k = 0; k < indicadores.length; k++) { 
-                if (indicadores[k]) indicadores[k].style.backgroundColor = '#362222'; 
+                if (indicadores[k]) { indicadores[k].style.backgroundColor = '#362222'; } 
             }
-            document.getElementById(sectionId).style.display = 'block';
-            document.getElementById(buttonId).classList.add('active');
-            if (document.getElementById(indicatorId)) {
+            
+            document.getElementById(sectionId).style.display = 'block'; 
+            document.getElementById(buttonId).classList.add('active'); 
+            if(document.getElementById(indicadorId)) {
                 document.getElementById(indicatorId).style.backgroundColor = '#7a3e3e';
+            }
+            
+            if (sectionId === 'comentarios') {
+                descargarComentariosNube();
             }
         }
 
         document.addEventListener("DOMContentLoaded", function() {
-            cargarComentariosDeMemoria();
+            descargarComentariosNube();
         });
 
-        // Generar un ID único para poder enlazar respuestas a comentarios específicos
-        function generarID() { return '_' + Math.random().toString(36).substr(2, 9); }
+        // 1. FUNCIÓN PARA TRAER LOS COMENTARIOS MUNDIALES DE INTERNET EN VIVO
+        function descargarComentariosNube() {
+            var contenedor = document.getElementById('muro-comentarios-render');
+            contenedor.innerHTML = "<div style='text-align:center; color:#ff8888;'>Sincronizando comentarios a nivel mundial...</div>";
 
-        function agregarComentarioLocal() {
+            fetch(URL_SERVIDOR)
+            .then(res => {
+                if (!res.ok) throw new Error();
+                return res.json();
+            })
+            .then(data => {
+                contenedor.innerHTML = "";
+                // Extraemos la lista del registro del servidor central
+                var lista = data || [];
+
+                if(lista.length === 0) {
+                    contenedor.innerHTML = '<div class="item-comentario"><span>Servidor Global • Vacío</span><p>¡El muro está limpio! Sé la primera persona en el planeta en comentar.</p></div>';
+                    return;
+                }
+
+                lista.forEach(function(item) {
+                    var estiloEspecial = "";
+                    var nombreMostrar = item.nombre;
+
+                    if (item.nombre.includes("👑")) {
+                        estiloEspecial = 'style="border: 2px solid #cc0000; background-color: #260505; box-shadow: 0 0 8px #cc0000;"';
+                    } else if (item.nombre.includes("🤡")) {
+                        estiloEspecial = 'style="border: 1px dashed #555; background-color: #1c1111;"';
+                    }
+
+                    var html = '<div class="item-comentario" ' + estiloEspecial + '>' +
+                               '<span>' + nombreMostrar + ' • Compartido en la red</span>' +
+                               '<p>' + item.texto + '</p>' +
+                               '</div>';
+                    contenedor.innerHTML += html;
+                });
+            })
+            .catch(err => {
+                contenedor.innerHTML = "<div style='text-align:center; color:red;'>No hay mensajes guardados o el servidor está iniciando. ¡Prueba mandar el primero!</div>";
+            });
+        }
+
+        // 2. FUNCIÓN PARA MANDAR TU COMENTARIO A LA NUBE EN TIEMPO REAL
+        function agregarComentarioNube() {
             var cajaNombre = document.getElementById('nombre-comentario');
             var cajaTexto = document.getElementById('texto-comentario');
+            var btn = document.getElementById('btn-subir-comentario');
+            
             var nombre = cajaNombre.value.trim() || "Anónimo";
             var mensaje = cajaTexto.value.trim();
             if(mensaje === "") return;
 
-            // 🔐 CANDADO DE SEGURIDAD
-            if (nombre.toLowerCase() === "creadora" || nombre.toLowerCase() === "nanalove") {
-                var password = prompt("Introduce tu contraseña secreta de Creadora:");
-                if (password === "gata123") { 
-                    nombre = "👑 Creadora (Nanalove)";
-                } else {
-                    alert("❌ ¡Contraseña incorrecta!");
-                    nombre = "Anónimo (Intento de Impostor)  clowns";
-                }
-            }
-
-            var listaComentarios = JSON.parse(localStorage.getItem("comentarios_nana")) || [];
-            listaComentarios.unshift({ id: generarID(), nombre: nombre, texto: mensaje, respuestas: [] });
-            localStorage.setItem("comentarios_nana", JSON.stringify(listaComentarios));
-
-            cargarComentariosDeMemoria();
-            cajaTexto.value = "";
-            cajaNombre.value = "";
-        }
-
-        // Función para abrir la micro-caja de respuesta abajo de un comentario
-        function abrirCajaRespuesta(idPadre) {
-            var cajaExistente = document.getElementById('caja-reply-' + idPadre);
-            if (cajaExistente) {
-                cajaExistente.style.display = cajaExistente.style.display === 'none' ? 'block' : 'none';
-                return;
-            }
-
-            var contenedorBoton = document.getElementById('btn-container-' + idPadre);
-                        var htmlCaja = '<div id="caja-reply-' + idPadre + '" style="margin-top:10px; display:flex; flex-direction:column; gap:8px;">' +
-                           '<input type="text" id="nombre-reply-' + idPadre + '" style="background:#150606; border:1px solid #6b1818; color:white; padding:6px; font-size:0.9rem;" placeholder="Tu apodo para responder">' +
-                           '<textarea id="texto-reply-' + idPadre + '" style="background:#150606; border:1px solid #6b1818; color:white; padding:8px; font-size:0.9rem; resize:none;" rows="2" placeholder="Escribe tu respuesta..."></textarea>' +
-                           '<button class="menu-btn" style="background:#5a1e1e; font-size:0.85rem; padding:5px; max-width:120px;" onclick="guardarRespuesta(\'' + idPadre + '\')">responder</button>' +
-                           '</div>';
-            contenedorBoton.insertAdjacentHTML('afterend', htmlCaja);
-        }
-
-        function guardarRespuesta(idPadre) {
-            var txtNombre = document.getElementById('nombre-reply-' + idPadre);
-            var txtTexto = document.getElementById('texto-reply-' + idPadre);
-            var nombre = txtNombre.value.trim() || "Anónimo";
-            var mensaje = txtTexto.value.trim();
-            if (mensaje === "") return;
-
-            // 🔐 CANDADO DE SEGURIDAD EN RESPUESTAS
-            if (nombre.toLowerCase() === "creadora" || nombre.toLowerCase() === "nanalove") {
+            // 🔐 TU CANDADO DE SEGURIDAD CONTRA IMPOSTORES
+            if (n = nombre.toLowerCase() === "creadora" || nombre.toLowerCase() === "nanalove") {
                 var password = prompt("Introduce tu contraseña secreta de Creadora:");
                 if (password === "gata123") { 
                     nombre = "👑 Creadora (Nanalove)";
@@ -308,63 +269,35 @@
                 }
             }
 
-            var listaComentarios = JSON.parse(localStorage.getItem("comentarios_nana")) || [];
-            
-            // Buscar el comentario papá para meterle la respuesta adentro
-            for (var i = 0; i < listaComentarios.length; i++) {
-                if (listaComentarios[i].id === idPadre) {
-                    if (!listaComentarios[i].respuestas) { listaComentarios[i].respuestas = []; }
-                    listaComentarios[i].respuestas.push({ nombre: nombre, texto: mensaje });
-                    break;
-                }
-            }
-            
-            localStorage.setItem("comentarios_nana", JSON.stringify(listaComentarios));
-            cargarComentariosDeMemoria();
-        }
+            btn.disabled = true;
+            btn.innerText = "subiendo...";
 
-        function cargarComentariosDeMemoria() {
-            var contenedor = document.getElementById('muro-comentarios-render');
-            contenedor.innerHTML = ""; 
-            var listaComentarios = JSON.parse(localStorage.getItem("comentarios_nana")) || [];
+            // Primero nos conectamos por el aire para descargar la lista global
+            fetch(URL_SERVIDOR)
+            .then(res => res.json())
+            .catch(() => []) // Si da error o está vacío, iniciamos una lista limpia
+            .then(listaActual => {
+                // Insertamos el mensaje nuevo hasta arriba del todo
+                listaActual.unshift({ nombre: nombre, texto: mensaje });
 
-            if (listaComentarios.length === 0) {
-                contenedor.innerHTML = '<div class="item-comentario"><span>Anónimo • Hace un momento</span><p>Me encanta el reproductor.</p></div>';
-                return;
-            }
-
-            listaComentarios.forEach(function(item) {
-                var estiloEspecial = "";
-                if (item.nombre.includes("👑")) {
-                    estiloEspecial = 'style="border: 2px solid #cc0000; background-color: #260505; box-shadow: 0 0 8px #cc0000;"';
-                } else if (item.nombre.includes("🤡")) {
-                    estiloEspecial = 'style="border: 1px dashed #555; background-color: #1c1111;"';
-                }
-
-                // Armar comentario papá con su botón de responder
-                var html = '<div class="item-comentario" ' + estiloEspecial + '>' +
-                           '<span>' + item.nombre + ' • Guardado en muro</span>' +
-                           '<p>' + item.texto + '</p>' +
-                           '<div id="btn-container-' + item.id + '" style="margin-top:8px;">' +
-                           '<span style="font-size:0.85rem; color:#ff8888; cursor:pointer; text-decoration:underline;" onclick="abrirCajaRespuesta(\'' + item.id + '\')">↳ responder</span>' +
-                           '</div>';
-
-                // Si el comentario tiene respuestas guardadas por dentro, pintarlas abajo escalonadas
-                if (item.respuestas && item.respuestas.length > 0) {
-                    html += '<div style="margin-left:25px; margin-top:15px; border-left:2px dotted #6b1818; padding-left:12px; display:flex; flex-direction:column; gap:10px;">';
-                    item.respuestas.forEach(function(rep) {
-                        var repEstilo = "";
-                        if (rep.nombre.includes("👑")) repEstilo = 'style="border: 1px solid #cc0000; background-color: #260505;"';
-                        html += '<div class="item-comentario" ' + repEstilo + ' style="font-size:0.95rem; padding:8px;">' +
-                                '<span style="font-size:0.75rem;">' + rep.nombre + ' • Respondió</span>' +
-                                '<p>' + rep.texto + '</p>' +
-                                '</div>';
-                    });
-                    html += '</div>';
-                }
-
-                html += '</div>'; // Cierre item-comentario principal
-                contenedor.innerHTML += html;
+                // Subimos de golpe la lista actualizada al servidor privado mundial
+                return fetch(URL_SERVIDOR, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(listaActual)
+                });
+            })
+            .then(() => {
+                btn.disabled = false;
+                btn.innerText = "comentar";
+                cajaTexto.value = "";
+                cajaNombre.value = "";
+                descargarComentariosNube(); // Refrescar el feed visual de inmediato en la pantalla
+            })
+            .catch(err => {
+                btn.disabled = false;
+                btn.innerText = "comentar";
+                alert("Error de conexión al subir. Revisa tu internet.");
             });
         }
     </script>
